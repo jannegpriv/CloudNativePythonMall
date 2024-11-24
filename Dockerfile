@@ -4,7 +4,7 @@ WORKDIR /app
 
 
 
-COPY requirements.txt requirements.txt
+COPY requirements2.txt requirements.txt
 RUN pip3 install --only-binary :all: greenlet
 RUN pip3 install --only-binary :all: MarkupSafe
 RUN pip3 install --only-binary :all: Flask-SQLAlchemy

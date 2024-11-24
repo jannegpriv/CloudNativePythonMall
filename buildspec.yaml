@@ -21,6 +21,6 @@ phases:
     commands:
   build:
     commands:
-      - docker build -t git.systementor.se/yacloud/stefanpython .
-      - docker login -u yacloud -p yacloud1 https://git.systementor.se
-      - docker push git.systementor.se/yacloud/stefanpython 
+      - docker build -t git.systementor.se/yacloud/jan.gustafsson .
+      - docker login -u jan.gustafsson -p yacloud1 https://git.systementor.se
+      - docker push git.systementor.se/yacloud/jan.gustafsson 
