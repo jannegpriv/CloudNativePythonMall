@@ -14,7 +14,10 @@ version: 0.2
 #   secrets-manager:
 #     key: secret-id:json-key:version-stage:version-id
 #   git-credential-helper: no | yes
-
+env:
+  parameter-store:
+    DOCKER_USERNAME: "DOCKER_USERNAME"
+    DOCKER_PASSWORD: "DOCKER_PASSWORD"
         
 phases:
   install:
@@ -22,5 +25,5 @@ phases:
   build:
     commands:
       - docker build -t git.systementor.se/jan.gustafsson/cloudnativepythonmall .
-      - docker login -u jan.gustafsson -p yacloud1 https://git.systementor.se
+      - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD https://git.systementor.se
       - docker push git.systementor.se/jan.gustafsson/cloudnativepythonmall 
